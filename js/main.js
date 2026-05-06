@@ -377,22 +377,7 @@ function initCounters() {
 
 /* ─── CONTACT FORM ───────────────────────────────────────────── */
 function initForm() {
-  const form = document.querySelector('.contact-form');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const original = btn.textContent;
-    btn.textContent = currentLang === 'ar' ? 'تم الإرسال ✓' : 'Sent ✓';
-    btn.disabled = true;
-    btn.style.background = 'var(--dark-gold)';
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.disabled = false;
-      btn.style.background = '';
-      form.reset();
-    }, 3000);
-  });
+  /* mailto: form — submits natively via the user's email client */
 }
 
 /* ─── SMOOTH SCROLL ──────────────────────────────────────────── */
